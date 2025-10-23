@@ -31,9 +31,9 @@ ServiceRef::Initialize(Local<Object> target) {
     constructor_template.Reset(t);
     t->InstanceTemplate()->SetInternalFieldCount(1);
     t->SetClassName(Nan::New("DNSServiceRef").ToLocalChecked());
-    
+
     Nan::SetAccessor(t->InstanceTemplate(), Nan::New("fd").ToLocalChecked(), fd_getter);
-    Nan::SetAccessor(t->InstanceTemplate(),  Nan::New("initialized").ToLocalChecked(), initialized_getter);
+    Nan::SetAccessor(t->InstanceTemplate(), Nan::New("initialized").ToLocalChecked(), initialized_getter);
     Nan::Set(target, Nan::New("DNSServiceRef").ToLocalChecked(), Nan::GetFunction(t).ToLocalChecked());
 }
 
@@ -101,7 +101,7 @@ ServiceRef::SetSocketFlags() {
 #endif
 }
 
-NAN_PROPERTY_GETTER(ServiceRef::fd_getter) {
+NAN_GETTER(ServiceRef::fd_getter) {
     ServiceRef * service_ref = Nan::ObjectWrap::Unwrap<ServiceRef>(info.This());
     int fd = -1;
     if (service_ref->ref_) {
@@ -114,7 +114,7 @@ NAN_PROPERTY_GETTER(ServiceRef::fd_getter) {
     info.GetReturnValue().Set(v);
 }
 
-NAN_PROPERTY_GETTER(ServiceRef::initialized_getter) {
+NAN_GETTER(ServiceRef::initialized_getter) {
     ServiceRef * service_ref = Nan::ObjectWrap::Unwrap<ServiceRef>(info.This());
     info.GetReturnValue().Set(Nan::New<Boolean>(service_ref->IsInitialized()));
 }
