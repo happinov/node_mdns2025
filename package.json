@@ -1,6 +1,6 @@
 {
   "name": "mdns2025",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "multicast DNS service discovery",
   "main": "./lib/mdns.js",
   "scripts": {
