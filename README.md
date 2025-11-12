@@ -1,6 +1,15 @@
-# mdns -- node.js Service Discovery
+# mdns2025 -- node.js Service Discovery
 
-* Package: mdns
+## Preface
+
+This project is a fork of [Agnat's node_mdns](https://github.com/agnat/node_mdns).
+The goal is to get the code to compile properly when using the latest node or Electron versions.
+
+No new feature will be added so there's no point in submitting requests for any of them or pull requests that would add some.
+
+## Description
+
+* Package: mdns2025
 * Description: multicast DNS service discovery
 * Installation: `npm install mdns` (see below)
 * Documentation: [mdns user guide](http://agnat.github.io/node_mdns/user_guide.html)

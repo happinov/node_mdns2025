@@ -1,6 +1,6 @@
 {
-  "name": "mdns",
-  "version": "2.7.2",
+  "name": "mdns2025",
+  "version": "0.0.1",
   "description": "multicast DNS service discovery",
   "main": "./lib/mdns.js",
   "scripts": {
@@ -25,24 +25,28 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/agnat/node_mdns.git"
+    "url": "http://github.com/happinov/node_mdns2025.git"
   },
-  "homepage": "http://agnat.github.io/node_mdns",
   "bugs": {
-    "url": "http://github.com/agnat/node_mdns/issues"
+    "url": "http://github.com/happinov/node_mdns2025/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "http://github.com/agnat/node_mdns/raw/master/LICENSE"
+      "url": "http://github.com/happinov/node_mdns2025/raw/master/LICENSE"
     }
   ],
   "author": {
-    "name": "David Siegel",
-    "email": "agnat@me.com",
-    "github": "agnat"
+    "name": "Nicolas Leclerc",
+    "email": "nicolas.leclerc@gmail.com",
+    "github": "nleclerc"
   },
   "contributors": [
+    {
+      "name": "David Siegel",
+      "email": "agnat@me.com",
+      "github": "agnat"
+    },
     {
       "name": "Orlando Vazquez",
       "email": "ovazquez@gmail.com",
