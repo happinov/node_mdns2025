@@ -38,7 +38,7 @@ inline
 void
 throwArgumentCountMismatchException(Nan::NAN_METHOD_ARGS_TYPE info, size_t expectedCount) {
     std::ostringstream msg;
-    msg << "argument count mismatch: expected " << expectedCount 
+    msg << "argument count mismatch: expected " << expectedCount
         << ", but got " <<  info.Length() << " arguments.";
     return throwError(msg.str().c_str());
 }
@@ -84,7 +84,8 @@ inline
 int
 Utf8Length(v8::Local<v8::Value> v) {
 #if (NODE_MODULE_VERSION >= NODE_11_0_MODULE_VERSION)
-  return ToString(v)->Utf8Length(v8::Isolate::GetCurrent());
+  v8::Isolate* isolate = v8::Isolate::GetCurrent();
+  return v->ToString(isolate->GetCurrentContext()).ToLocalChecked()->Utf8Length(isolate);
 #else
   return ToString(v)->Utf8Length();
 #endif
